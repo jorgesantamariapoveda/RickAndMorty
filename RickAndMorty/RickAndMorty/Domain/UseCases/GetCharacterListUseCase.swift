@@ -1,5 +1,5 @@
 //
-//  GetCharacterList.swift
+//  GetCharacterListUseCase.swift
 //  RickAndMorty
 //
 //  Created by Jorge on 17/11/23.
@@ -7,7 +7,7 @@
 
 import Foundation
     
-final class GetCharacterList {
+final class GetCharacterListUseCase {
     private let repository: CharacterListRepositoryType
     
     init(repository: CharacterListRepositoryType) {
