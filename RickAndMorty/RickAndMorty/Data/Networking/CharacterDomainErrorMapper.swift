@@ -15,6 +15,14 @@ final class CharacterDomainErrorMapper {
             return .generic
         case .serverError:
             return .generic
+        case .parsingError:
+            return .generic
+        case .badURL:
+            return .generic
+        case .responseError:
+            return .generic
+        case .genericError:
+            return .generic
         }
     }
 }
