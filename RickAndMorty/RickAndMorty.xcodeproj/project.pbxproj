@@ -30,7 +30,6 @@
 		CFCED1FC2B07E57F00280416 /* CharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1FB2B07E57F00280416 /* CharacterDTO.swift */; };
 		CFCED1FF2B07E5C000280416 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1FE2B07E5C000280416 /* HTTPClientError.swift */; };
 		CFCED2012B07E5F300280416 /* CharacterApiDataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED2002B07E5F300280416 /* CharacterApiDataSourceType.swift */; };
-		CFCED2032B07EE7A00280416 /* CharacterDomainErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED2022B07EE7A00280416 /* CharacterDomainErrorMapper.swift */; };
 		CFCED2052B07EE8D00280416 /* CharacterDomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED2042B07EE8D00280416 /* CharacterDomainMapper.swift */; };
 		CFEDB0D52BD3C04100716E24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEDB0D42BD3C04100716E24 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -60,7 +59,6 @@
 		CFCED1FB2B07E57F00280416 /* CharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDTO.swift; sourceTree = "<group>"; };
 		CFCED1FE2B07E5C000280416 /* HTTPClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
 		CFCED2002B07E5F300280416 /* CharacterApiDataSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterApiDataSourceType.swift; sourceTree = "<group>"; };
-		CFCED2022B07EE7A00280416 /* CharacterDomainErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDomainErrorMapper.swift; sourceTree = "<group>"; };
 		CFCED2042B07EE8D00280416 /* CharacterDomainMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDomainMapper.swift; sourceTree = "<group>"; };
 		CFEDB0D42BD3C04100716E24 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,7 +226,6 @@
 			children = (
 				CF5BCA4B2B0A2DE4005B2576 /* CharacterApiDataSource.swift */,
 				CFCED2002B07E5F300280416 /* CharacterApiDataSourceType.swift */,
-				CFCED2022B07EE7A00280416 /* CharacterDomainErrorMapper.swift */,
 				CF5BCA4F2B0A35EF005B2576 /* Endpoint.swift */,
 				CFCED1FE2B07E5C000280416 /* HTTPClientError.swift */,
 				CF5BCA532B0A3654005B2576 /* HTTPClientType.swift */,
@@ -328,7 +325,6 @@
 				CF5BCA522B0A360B005B2576 /* HTTPMethod.swift in Sources */,
 				CF0FDED72B07D21900A512B1 /* RickAndMortyApp.swift in Sources */,
 				CF5BCA4C2B0A2DE4005B2576 /* CharacterApiDataSource.swift in Sources */,
-				CFCED2032B07EE7A00280416 /* CharacterDomainErrorMapper.swift in Sources */,
 				CF5BCA542B0A3654005B2576 /* HTTPClientType.swift in Sources */,
 				CF5BCA5C2B0A4074005B2576 /* URLSessionErrorResolver.swift in Sources */,
 			);
