@@ -95,17 +95,17 @@
 		CF0FDED52B07D21900A512B1 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				CFEDB0D42BD3C04100716E24 /* LaunchScreen.storyboard */,
+				CF0FDED82B07D21900A512B1 /* ContentView.swift */,
+				CF0FDED62B07D21900A512B1 /* RickAndMortyApp.swift */,
+				CF0FDEDA2B07D21A00A512B1 /* Assets.xcassets */,
 				CF5BCA632B0A4D30005B2576 /* ComposicionRoot */,
-				CF5BCA602B0A44C3005B2576 /* UI */,
-				CF5BCA5D2B0A4334005B2576 /* Presentation */,
-				CF5BCA552B0A366F005B2576 /* Infraestructure */,
 				CFCED1F62B07DD8000280416 /* Data */,
 				CF0FDEE42B07D2B000A512B1 /* Domain */,
-				CF0FDED62B07D21900A512B1 /* RickAndMortyApp.swift */,
-				CF0FDED82B07D21900A512B1 /* ContentView.swift */,
-				CF0FDEDA2B07D21A00A512B1 /* Assets.xcassets */,
+				CF5BCA552B0A366F005B2576 /* Infraestructure */,
+				CF5BCA5D2B0A4334005B2576 /* Presentation */,
 				CF0FDEDC2B07D21A00A512B1 /* Preview Content */,
-				CFEDB0D42BD3C04100716E24 /* LaunchScreen.storyboard */,
+				CF5BCA602B0A44C3005B2576 /* UI */,
 			);
 			path = RickAndMorty;
 			sourceTree = "<group>";
@@ -121,10 +121,10 @@
 		CF0FDEE42B07D2B000A512B1 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				CFCED1F42B07DCD000280416 /* CharacterDomainError.swift */,
+				CF0FDEE52B07D64200A512B1 /* Entities */,
 				CFCED1F12B07DC7900280416 /* Interfaces */,
 				CF0FDEE82B07D89300A512B1 /* UseCases */,
-				CF0FDEE52B07D64200A512B1 /* Entities */,
-				CFCED1F42B07DCD000280416 /* CharacterDomainError.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -156,9 +156,9 @@
 		CF5BCA562B0A3687005B2576 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				CF5BCA5B2B0A4074005B2576 /* URLSessionErrorResolver.swift */,
 				CF5BCA572B0A36C1005B2576 /* URLSessionHTTPClient.swift */,
 				CF5BCA592B0A4055005B2576 /* URLSessionRequestMaker.swift */,
-				CF5BCA5B2B0A4074005B2576 /* URLSessionErrorResolver.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -198,8 +198,8 @@
 		CFCED1F62B07DD8000280416 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				CFCED1FD2B07E59700280416 /* Networking */,
 				CFCED1FA2B07E57600280416 /* DTOs */,
+				CFCED1FD2B07E59700280416 /* Networking */,
 				CFCED1F72B07DD8C00280416 /* Repositories */,
 			);
 			path = Data;
@@ -226,13 +226,13 @@
 		CFCED1FD2B07E59700280416 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				CFCED1FE2B07E5C000280416 /* HTTPClientError.swift */,
-				CF5BCA512B0A360B005B2576 /* HTTPMethod.swift */,
-				CFCED2002B07E5F300280416 /* CharacterApiDataSourceType.swift */,
 				CF5BCA4B2B0A2DE4005B2576 /* CharacterApiDataSource.swift */,
-				CF5BCA532B0A3654005B2576 /* HTTPClientType.swift */,
-				CF5BCA4F2B0A35EF005B2576 /* Endpoint.swift */,
+				CFCED2002B07E5F300280416 /* CharacterApiDataSourceType.swift */,
 				CFCED2022B07EE7A00280416 /* CharacterDomainErrorMapper.swift */,
+				CF5BCA4F2B0A35EF005B2576 /* Endpoint.swift */,
+				CFCED1FE2B07E5C000280416 /* HTTPClientError.swift */,
+				CF5BCA532B0A3654005B2576 /* HTTPClientType.swift */,
+				CF5BCA512B0A360B005B2576 /* HTTPMethod.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
