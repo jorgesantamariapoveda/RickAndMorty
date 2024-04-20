@@ -24,6 +24,7 @@
 		CF5BCA5F2B0A4362005B2576 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA5E2B0A4362005B2576 /* CharacterListViewModel.swift */; };
 		CF5BCA622B0A44E7005B2576 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA612B0A44E7005B2576 /* CharacterListView.swift */; };
 		CF5BCA652B0A4D4E005B2576 /* CharacterListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA642B0A4D4E005B2576 /* CharacterListFactory.swift */; };
+		CF82151A2BD428EE008F75A3 /* CharacterListRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8215192BD428EE008F75A3 /* CharacterListRepresentable.swift */; };
 		CFCED1F32B07DC8D00280416 /* CharacterListRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1F22B07DC8D00280416 /* CharacterListRepositoryType.swift */; };
 		CFCED1F52B07DCD000280416 /* CharacterDomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1F42B07DCD000280416 /* CharacterDomainError.swift */; };
 		CFCED1F92B07DDCB00280416 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1F82B07DDCB00280416 /* CharacterRepository.swift */; };
@@ -53,6 +54,7 @@
 		CF5BCA5E2B0A4362005B2576 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
 		CF5BCA612B0A44E7005B2576 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 		CF5BCA642B0A4D4E005B2576 /* CharacterListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListFactory.swift; sourceTree = "<group>"; };
+		CF8215192BD428EE008F75A3 /* CharacterListRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListRepresentable.swift; sourceTree = "<group>"; };
 		CFCED1F22B07DC8D00280416 /* CharacterListRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListRepositoryType.swift; sourceTree = "<group>"; };
 		CFCED1F42B07DCD000280416 /* CharacterDomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDomainError.swift; sourceTree = "<group>"; };
 		CFCED1F82B07DDCB00280416 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		CF5BCA5D2B0A4334005B2576 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CF8215192BD428EE008F75A3 /* CharacterListRepresentable.swift */,
 				CF5BCA5E2B0A4362005B2576 /* CharacterListViewModel.swift */,
 			);
 			path = Presentation;
@@ -321,6 +324,7 @@
 				CF0FDEEA2B07D8CA00A512B1 /* GetCharacterListUseCase.swift in Sources */,
 				CFCED1F92B07DDCB00280416 /* CharacterRepository.swift in Sources */,
 				CF5BCA4E2B0A31A8005B2576 /* CharacterListDTO.swift in Sources */,
+				CF82151A2BD428EE008F75A3 /* CharacterListRepresentable.swift in Sources */,
 				CFCED1F32B07DC8D00280416 /* CharacterListRepositoryType.swift in Sources */,
 				CF5BCA522B0A360B005B2576 /* HTTPMethod.swift in Sources */,
 				CF0FDED72B07D21900A512B1 /* RickAndMortyApp.swift in Sources */,
