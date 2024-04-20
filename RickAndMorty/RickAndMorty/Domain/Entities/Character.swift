@@ -1,6 +1,5 @@
 import Foundation
 
-//!! Review 🔴 rename Character -> CharacterRickMorty
 struct Character {
     let id: Int
     let name: String
@@ -8,5 +7,4 @@ struct Character {
     let species: String
     let lastKnownLocation: String
     let firstSeenIn: String
-    //!! Review 🔴 image
 }
