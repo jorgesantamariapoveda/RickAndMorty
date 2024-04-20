@@ -17,24 +17,27 @@ extension CGFloat {
 
 struct ContentView: View {
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack {
-                    CardCharacter()
-                    CardCharacter()
-                    CardCharacter()
-                    CardCharacter()
-                    CardCharacter()
-                    CardCharacter()
-                }
-                .padding()
-            }
-            .navigationTitle("The Rick and Morty")
-        }
+        Text("pruebas")
+//        NavigationStack {
+//            ScrollView {
+//                VStack {
+//                    CardCharacter()
+//                    CardCharacter()
+//                    CardCharacter()
+//                    CardCharacter()
+//                    CardCharacter()
+//                    CardCharacter()
+//                }
+//                .padding()
+//            }
+//            .navigationTitle("The Rick and Morty")
+//        }
     }
 }
 
 struct CardCharacter: View {
+    let character: CharacterListRepresentable
+    
     var body: some View {
         HStack(spacing: 12) {
             Image(systemName: "person.crop.circle")
@@ -43,8 +46,8 @@ struct CardCharacter: View {
 //                .frame(maxWidth: .infinity, maxHeight: .infinity)
 //                .background(.red)
             VStack(alignment: .leading, spacing: .spacingL) {
-                HeaderCardCharacter(title: "Jerry Smith", subtitle: "🟢 Alive - Human")
-                BodyCardCharacter(title: "Last known location:", subtitle: "Earth (Replacement Dimension)")
+                HeaderCardCharacter(title: character.name, subtitle: character.statusAndSpecie)
+                BodyCardCharacter(title: "Last known location:", subtitle: character.lastKnownLocation)
                 BodyCardCharacter(title: "First seen in:", subtitle: "Rick Potion #9")
             }
             .frame(maxWidth: .infinity)
