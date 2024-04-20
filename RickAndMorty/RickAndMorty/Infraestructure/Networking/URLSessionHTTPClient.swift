@@ -40,7 +40,7 @@ final class URLSessionHTTPClient: HTTPClientType {
             return .failure(.responseError)
         }
         
-        guard response.statusCode == 220 else {
+        guard response.statusCode == 200 else {
             let error = errorResolver.resolve(statusCode: response.statusCode)
             return .failure(error)
         }
