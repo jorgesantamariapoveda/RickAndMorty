@@ -1,19 +1,5 @@
 import Foundation
 
-struct CharacterListRepresentable {
-    let id: Int
-    let name: String
-    let statusAndSpecie: String
-    let lastKnownLocation: String
-    
-    init(domainModel: Character) {
-        self.id = domainModel.id
-        self.name = domainModel.name
-        self.statusAndSpecie = domainModel.status + " - " + domainModel.species
-        self.lastKnownLocation = domainModel.lastKnownLocation
-    }
-}
-
 final class CharacterListViewModel: ObservableObject {
     private let getCharacterListUseCase: GetCharacterListUseCaseType
     
@@ -33,7 +19,7 @@ final class CharacterListViewModel: ObservableObject {
     }
     
     @MainActor
-    func onAppear() {
+    func getCharacterList() {
         state = .loading
         Task {
             do {

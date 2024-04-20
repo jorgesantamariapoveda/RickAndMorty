@@ -11,34 +11,21 @@ struct CharacterListView: View {
         VStack {
             switch viewModel.state {
             case .idle:
-                Text("Idle")
+                EmptyView()
             case .loading:
-                Text("Loading")
+                ProgressView()
             case .loaded:
-                VStack {
-                    Text("Loaded")
-                    listView
-                        
+                List {
+                    ForEach(viewModel.characters) { character in
+                        CardCharacter(character: character)
+                    }
                 }
             case .error:
                 Text("Error")
             }
         }
         .onAppear {
-            viewModel.onAppear()
-        }
-    }
-    
-    var listView: some View {
-        List {
-            ForEach(viewModel.characters, id: \.id) { character in
-                VStack(alignment: .leading) {
-                    Text(character.name)
-                    Text(character.statusAndSpecie)
-                    Text(character.lastKnownLocation)
-                }
-                .background(Color.blue)
-            }
+            viewModel.getCharacterList()
         }
     }
 }
