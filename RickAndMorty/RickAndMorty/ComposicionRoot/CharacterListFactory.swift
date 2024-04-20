@@ -21,8 +21,7 @@ final class CharacterListFactory {
     private static func createRepository() -> CharacterListRepositoryType {
         CharacterRepository(
             apiDataSource: createApiDataSource(),
-            domainMapper: CharacterDomainMapper(),
-            domainErrorMapper: CharacterDomainErrorMapper()
+            domainMapper: CharacterDomainMapper()
         )
     }
     

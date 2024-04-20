@@ -1,7 +1,7 @@
 import Foundation
 
 protocol GetCharacterListUseCaseType {
-    func execute() async -> Result<[Character], CharacterDomainError>
+    func execute() async throws -> [Character]
 }
     
 final class GetCharacterListUseCase: GetCharacterListUseCaseType {
@@ -11,14 +11,7 @@ final class GetCharacterListUseCase: GetCharacterListUseCaseType {
         self.repository = repository
     }
     
-    func execute() async -> Result<[Character], CharacterDomainError> {
-        let result = await repository.getCharacterList()
-        
-        switch result {
-        case .success(let characterList):
-            return .success(characterList)
-        case .failure(let error):
-            return .failure(error)
-        }
+    func execute() async throws -> [Character] {
+        try await repository.getCharacterList()
     }
 }

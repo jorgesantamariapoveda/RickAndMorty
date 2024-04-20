@@ -32,21 +32,17 @@ final class CharacterListViewModel: ObservableObject {
         self.getCharacterListUseCase = getCharacterListUseCase
     }
     
+    @MainActor
     func onAppear() {
         state = .loading
         Task {
-            let result = await getCharacterListUseCase.execute()
-            
-            Task { @MainActor in
-                switch result {
-                case .success(let characterList):
-                    state = .loaded
-                    characters = characterList.map { CharacterListRepresentable(domainModel: $0) }
-                    print("koko")
-                case .failure(let error):
-                    state = .error
-                    errors = error.localizedDescription
-                }
+            do {
+                let result = try await getCharacterListUseCase.execute()
+                state = .loaded
+                characters = result.map { CharacterListRepresentable(domainModel: $0) }
+            } catch {
+                state = .error
+                errors = error.localizedDescription
             }
         }
     }

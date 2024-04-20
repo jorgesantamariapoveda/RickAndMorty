@@ -15,29 +15,25 @@ final class URLSessionHTTPClient: HTTPClientType {
         self.errorResolver = errorResolver
     }
     
-    func makeRequest(
-        endpoint: Endpoint,
-        baseUrl: String
-    ) async -> Result<Data, HTTPClientError> {
+    func makeRequest(endpoint: Endpoint, baseUrl: String) async throws -> Data {
         let url = requestMaquer.url(endpoint: endpoint, baseUrl: baseUrl)
         
         guard let url = url else {
-            return .failure(.badURL)
+            throw HTTPClientError.badURL
         }
         
-        guard let result = try? await session.data(from: url) else {
-            return .failure(.genericError)
+        guard let (data, response) = try? await session.data(from: url) else {
+            throw HTTPClientError.genericError
         }
         
-        guard let response = result.1 as? HTTPURLResponse else {
-            return .failure(.responseError)
+        guard let response = response as? HTTPURLResponse else {
+            throw HTTPClientError.responseError
         }
         
         guard response.statusCode == 200 else {
-            let error = errorResolver.resolve(statusCode: response.statusCode)
-            return .failure(error)
+            throw errorResolver.resolve(statusCode: response.statusCode)
         }
         
-        return .success(result.0)
+        return data
     }
 }

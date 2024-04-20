@@ -1,5 +1,5 @@
 import Foundation
 
 protocol CharacterApiDataSourceType {
-    func getCharacterList() async -> Result<[CharacterDTO], HTTPClientError>
+    func getCharacterList() async throws -> [CharacterDTO]
 }

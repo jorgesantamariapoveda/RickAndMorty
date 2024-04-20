@@ -3,26 +3,18 @@ import Foundation
 final class CharacterRepository: CharacterListRepositoryType {
     private var apiDataSource: CharacterApiDataSourceType
     private var domainMapper: CharacterDomainMapper
-    private var domainErrorMapper: CharacterDomainErrorMapper
 
     init(
         apiDataSource: CharacterApiDataSourceType,
-        domainMapper: CharacterDomainMapper,
-        domainErrorMapper: CharacterDomainErrorMapper
+        domainMapper: CharacterDomainMapper
     ) {
         self.apiDataSource = apiDataSource
         self.domainMapper = domainMapper
-        self.domainErrorMapper = domainErrorMapper
     }
     
-    func getCharacterList() async -> Result<[Character], CharacterDomainError> {
-        let result = await apiDataSource.getCharacterList()
+    func getCharacterList() async throws -> [Character] {
+        let characterList = try await apiDataSource.getCharacterList()
         
-        switch result {
-        case .success(let characterList):
-            return .success(domainMapper.map(characterList: characterList))
-        case .failure(let error):
-            return .failure(domainErrorMapper.map(error: error))
-        }
+        return domainMapper.map(characterList: characterList)
     }
 }
