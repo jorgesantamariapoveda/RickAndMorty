@@ -6,8 +6,12 @@
 //
 
 import Foundation
+
+protocol GetCharacterListUseCaseType {
+    func execute() async -> Result<[Character], CharacterDomainError>
+}
     
-final class GetCharacterListUseCase {
+final class GetCharacterListUseCase: GetCharacterListUseCaseType {
     private let repository: CharacterListRepositoryType
     
     init(repository: CharacterListRepositoryType) {
