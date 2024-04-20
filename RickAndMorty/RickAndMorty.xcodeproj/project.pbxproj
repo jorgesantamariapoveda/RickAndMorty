@@ -21,6 +21,9 @@
 		CF5BCA582B0A36C1005B2576 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA572B0A36C1005B2576 /* URLSessionHTTPClient.swift */; };
 		CF5BCA5A2B0A4055005B2576 /* URLSessionRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA592B0A4055005B2576 /* URLSessionRequestMaker.swift */; };
 		CF5BCA5C2B0A4074005B2576 /* URLSessionErrorResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA5B2B0A4074005B2576 /* URLSessionErrorResolver.swift */; };
+		CF5BCA5F2B0A4362005B2576 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA5E2B0A4362005B2576 /* CharacterListViewModel.swift */; };
+		CF5BCA622B0A44E7005B2576 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA612B0A44E7005B2576 /* CharacterListView.swift */; };
+		CF5BCA652B0A4D4E005B2576 /* CharacterListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA642B0A4D4E005B2576 /* CharacterListFactory.swift */; };
 		CFCED1F32B07DC8D00280416 /* CharacterListRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1F22B07DC8D00280416 /* CharacterListRepositoryType.swift */; };
 		CFCED1F52B07DCD000280416 /* CharacterDomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1F42B07DCD000280416 /* CharacterDomainError.swift */; };
 		CFCED1F92B07DDCB00280416 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1F82B07DDCB00280416 /* CharacterRepository.swift */; };
@@ -47,6 +50,9 @@
 		CF5BCA572B0A36C1005B2576 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		CF5BCA592B0A4055005B2576 /* URLSessionRequestMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionRequestMaker.swift; sourceTree = "<group>"; };
 		CF5BCA5B2B0A4074005B2576 /* URLSessionErrorResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionErrorResolver.swift; sourceTree = "<group>"; };
+		CF5BCA5E2B0A4362005B2576 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
+		CF5BCA612B0A44E7005B2576 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		CF5BCA642B0A4D4E005B2576 /* CharacterListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListFactory.swift; sourceTree = "<group>"; };
 		CFCED1F22B07DC8D00280416 /* CharacterListRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListRepositoryType.swift; sourceTree = "<group>"; };
 		CFCED1F42B07DCD000280416 /* CharacterDomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDomainError.swift; sourceTree = "<group>"; };
 		CFCED1F82B07DDCB00280416 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
@@ -87,6 +93,9 @@
 		CF0FDED52B07D21900A512B1 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				CF5BCA632B0A4D30005B2576 /* ComposicionRoot */,
+				CF5BCA602B0A44C3005B2576 /* UI */,
+				CF5BCA5D2B0A4334005B2576 /* Presentation */,
 				CF5BCA552B0A366F005B2576 /* Infraestructure */,
 				CFCED1F62B07DD8000280416 /* Data */,
 				CF0FDEE42B07D2B000A512B1 /* Domain */,
@@ -149,6 +158,30 @@
 				CF5BCA5B2B0A4074005B2576 /* URLSessionErrorResolver.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		CF5BCA5D2B0A4334005B2576 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CF5BCA5E2B0A4362005B2576 /* CharacterListViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CF5BCA602B0A44C3005B2576 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CF5BCA612B0A44E7005B2576 /* CharacterListView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CF5BCA632B0A4D30005B2576 /* ComposicionRoot */ = {
+			isa = PBXGroup;
+			children = (
+				CF5BCA642B0A4D4E005B2576 /* CharacterListFactory.swift */,
+			);
+			path = ComposicionRoot;
 			sourceTree = "<group>";
 		};
 		CFCED1F12B07DC7900280416 /* Interfaces */ = {
@@ -271,8 +304,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5BCA622B0A44E7005B2576 /* CharacterListView.swift in Sources */,
 				CF5BCA5A2B0A4055005B2576 /* URLSessionRequestMaker.swift in Sources */,
 				CFCED1FF2B07E5C000280416 /* HTTPClientError.swift in Sources */,
+				CF5BCA652B0A4D4E005B2576 /* CharacterListFactory.swift in Sources */,
 				CF0FDEE72B07D6AB00A512B1 /* Character.swift in Sources */,
 				CFCED2012B07E5F300280416 /* CharacterApiDataSourceType.swift in Sources */,
 				CFCED1FC2B07E57F00280416 /* CharacterDTO.swift in Sources */,
@@ -281,6 +316,7 @@
 				CF5BCA582B0A36C1005B2576 /* URLSessionHTTPClient.swift in Sources */,
 				CF0FDED92B07D21900A512B1 /* ContentView.swift in Sources */,
 				CFCED1F52B07DCD000280416 /* CharacterDomainError.swift in Sources */,
+				CF5BCA5F2B0A4362005B2576 /* CharacterListViewModel.swift in Sources */,
 				CF0FDEEA2B07D8CA00A512B1 /* GetCharacterListUseCase.swift in Sources */,
 				CFCED1F92B07DDCB00280416 /* CharacterRepository.swift in Sources */,
 				CF5BCA4E2B0A31A8005B2576 /* CharacterListDTO.swift in Sources */,
