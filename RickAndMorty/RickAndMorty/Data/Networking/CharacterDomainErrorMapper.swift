@@ -1,10 +1,3 @@
-//
-//  CharacterDomainErrorMapper.swift
-//  RickAndMorty
-//
-//  Created by Jorge on 17/11/23.
-//
-
 import Foundation
 
 final class CharacterDomainErrorMapper {

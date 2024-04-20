@@ -1,9 +1,3 @@
-//
-//  CharacterListFactory.swift
-//  RickAndMorty
-//
-//  Created by Jorge on 19/11/23.
-//
 
 final class CharacterListFactory {
     static func create() -> CharacterListView {
