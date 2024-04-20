@@ -17,18 +17,10 @@ struct CharacterDTO: Decodable {
     enum Status: String, Decodable {
         case alive = "Alive"
         case dead = "Dead"
-        case unknow = "Unknow"
+        case unknown = "unknown"
     }
     
     struct Location: Decodable {
         let name: String
-    }
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case name
-        case status
-        case species
-        case location
     }
 }
