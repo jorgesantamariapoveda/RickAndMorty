@@ -12,14 +12,10 @@ final class CharacterApiDataSource: CharacterApiDataSourceType {
     }
     
     func getCharacterList() async throws -> [CharacterDTO] {
-        let endpoint = Endpoint(
+        let data = try await httpClient.makeRequest(
+            baseUrl: "https://rickandmortyapi.com/api/",
             path: "character",
             method: .get
-        )
-        
-        let data = try await httpClient.makeRequest(
-            endpoint: endpoint,
-            baseUrl: "https://rickandmortyapi.com/api/"
         )
         
         guard let result = try? JSONDecoder().decode(CharacterListDTO.self, from: data) else {

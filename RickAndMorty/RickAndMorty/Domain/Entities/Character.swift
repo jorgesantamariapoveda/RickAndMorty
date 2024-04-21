@@ -6,7 +6,7 @@ struct Character: Identifiable {
     let status: CharacterStatus
     let species: String
     let lastKnownLocation: String
-    let firstSeenIn: String
+    let episodeList: [String]
     let image: URL?
 }
 

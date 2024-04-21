@@ -49,7 +49,7 @@ struct CharacterView_Previews: PreviewProvider {
             status: .alive,
             species: "Animal",
             lastKnownLocation: "lastKnownLocation",
-            firstSeenIn: "firstSeenIn",
+            episodeList: [],
             image: URL(string: "https://rickandmortyapi.com/api/character/avatar/406.jpeg")
         )
         

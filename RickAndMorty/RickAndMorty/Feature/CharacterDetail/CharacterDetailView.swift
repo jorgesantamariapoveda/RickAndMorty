@@ -1,7 +1,11 @@
 import SwiftUI
 
 struct CharacterDetailView: View {
-    let character: Character
+    @ObservedObject private var viewModel: CharacterDetailViewModel
+
+    init(viewModel: CharacterDetailViewModel) {
+        self.viewModel = viewModel
+    }
     
     enum Constant {
         static let sizeImage: CGFloat = 300
@@ -14,52 +18,55 @@ struct CharacterDetailView: View {
     var body: some View {
         VStack(alignment: .leading) {
             CharacterImageView(
-                imageURL: character.image,
+                imageURL: viewModel.character.image,
                 width: Constant.sizeImage, height: Constant.sizeImage,
                 cornerRadius: Constant.cornerRadiusImage
             ).padding(.bottom)
             
             VStack(alignment: .leading) {
                 VStack(alignment: .leading, spacing: .zero) {
-                    Text(character.name)
+                    Text(viewModel.character.name)
                         .font(.title)
                         .fontWeight(.bold)
                     
                     HStack(alignment: .center) {
                         Circle()
                             .frame(width: Constant.radioStatusColor, height: Constant.radioStatusColor)
-                            .foregroundStyle(character.statusColor)
+                            .foregroundStyle(viewModel.character.statusColor)
                         
-                        Text(character.statusAndSpecieDescription)
+                        Text(viewModel.character.statusAndSpecieDescription)
                             .font(.body)
                     }
                 }.padding(.bottom)
                 
                 CharacterSectionSubview(
                     title: "Last known location:",
-                    subtitle: character.lastKnownLocation
+                    subtitle: viewModel.character.lastKnownLocation
                 ).padding(.bottom)
                 
                 CharacterSectionSubview(
                     title: "First seen in:",
-                    subtitle: character.firstSeenIn
+                    subtitle: viewModel.firstSeenIn
                 ).padding(.bottom)
             }
             
             Spacer()
         }
+        .onAppear {
+            viewModel.getEpisode()
+        }
     }
 }
 
-#Preview {
-    let character = Character(
-        id: 1,
-        name: "Spiderweb teddy bear",
-        status: .dead,
-        species: "Animal",
-        lastKnownLocation: "Citadel of Ricks",
-        firstSeenIn: "Childrick of Mort",
-        image: URL(string: "https://rickandmortyapi.com/api/character/avatar/406.jpeg")
-    )
-    return CharacterDetailView(character: character)
-}
+//#Preview {
+//    let character = Character(
+//        id: 1,
+//        name: "Spiderweb teddy bear",
+//        status: .dead,
+//        species: "Animal",
+//        lastKnownLocation: "Citadel of Ricks",
+//        episodeList: [],
+//        image: URL(string: "https://rickandmortyapi.com/api/character/avatar/406.jpeg")
+//    )
+//    return CharacterDetailView(character: character)
+//}

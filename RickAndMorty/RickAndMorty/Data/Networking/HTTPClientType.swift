@@ -1,5 +1,6 @@
 import Foundation
 
 protocol HTTPClientType {
-    func makeRequest(endpoint: Endpoint, baseUrl: String) async throws -> Data
+    func makeRequest(baseUrl: String, path: String, method: HTTPMethod) async throws -> Data
+    func makeRequest(url: String, method: HTTPMethod) async throws -> Data
 }

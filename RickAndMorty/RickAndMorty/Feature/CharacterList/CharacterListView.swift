@@ -19,7 +19,9 @@ struct CharacterListView: View {
                     List {
                         ForEach(viewModel.characters) { character in
                             NavigationLink {
-                                CharacterDetailView(character: character)
+                                CharacterDetailFactory.create(character: character)
+//                                Text("Implementar \(character.episodeList.count)")
+//                                CharacterDetailView(character: character)
                             } label: {
                                 CharacterView(character: character)
                             }

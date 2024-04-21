@@ -7,6 +7,17 @@ struct CharacterDTO: Decodable {
     let species: String
     let location: Location
     let image: String
+    let episodeList: [String]
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case status
+        case species
+        case location
+        case image
+        case episodeList = "episode"
+    }
     
     enum Status: String, Decodable {
         case alive = "Alive"
