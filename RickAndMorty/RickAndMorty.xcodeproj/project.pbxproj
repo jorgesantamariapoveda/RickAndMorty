@@ -130,6 +130,7 @@
 				CFA2D2782BD4EB8200A5FA8B /* Feature */,
 				CF5BCA552B0A366F005B2576 /* Infraestructure */,
 				CF0FDEDC2B07D21A00A512B1 /* Preview Content */,
+				CF67C1C22BD55EF100E5BBD9 /* UI */,
 			);
 			path = RickAndMorty;
 			sourceTree = "<group>";
@@ -175,7 +176,6 @@
 		CF5BCA552B0A366F005B2576 /* Infraestructure */ = {
 			isa = PBXGroup;
 			children = (
-				CF67C1C22BD55EF100E5BBD9 /* UI */,
 				CF5BCA562B0A3687005B2576 /* Networking */,
 			);
 			path = Infraestructure;
