@@ -11,13 +11,14 @@ final class CharacterListViewModel: ObservableObject {
     }
     
     @Published var state: State = .idle
-    @Published var characters = [Character]()
     @Published var errors = "" {
         didSet {
             showErrors = !errors.isEmpty
         }
     }
     @Published var showErrors = false
+    
+    @Published var characters = [Character]()
     
     init(getCharacterListUseCase: GetCharacterListUseCaseType) {
         self.getCharacterListUseCase = getCharacterListUseCase

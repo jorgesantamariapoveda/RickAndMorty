@@ -22,10 +22,8 @@ final class CharacterDetailViewModel: ObservableObject {
             do {
                 let episode = try await getEpisodeUseCase.execute(url: firstEpisode)
                 firstSeenIn = episode.name
-//                state = .loaded
             } catch {
-//                state = .error
-//                errors = error.localizedDescription
+                print("🔴 \(error)") //!! Review 🔴 Improve
             }
         }
     }
