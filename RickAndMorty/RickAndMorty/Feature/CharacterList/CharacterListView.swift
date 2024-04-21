@@ -15,11 +15,18 @@ struct CharacterListView: View {
             case .loading:
                 ProgressView()
             case .loaded:
-                List {
-                    ForEach(viewModel.characters) { character in
-                        CharacterView(character: character)
+                NavigationStack {
+                    List {
+                        ForEach(viewModel.characters) { character in
+                            NavigationLink {
+                                Text(character.name)
+                            } label: {
+                                CharacterView(character: character)
+                            }
+                        }
+                        .listRowSeparator(.hidden)
                     }
-                    .listRowSeparator(.hidden)
+                    .navigationTitle("Characters")
                 }
             case .error:
                 Text("Error") //!! Review 🔴 Improve
