@@ -10,11 +10,11 @@ final class CharacterDetailFactory {
     private static func createViewModel(character: Character) -> CharacterDetailViewModel {
         CharacterDetailViewModel(
             character: character,
-            getEpisodeUseCase: createGetCharacterListUseCase()
+            getEpisodeUseCase: createGetEpisodeUseCase()
         )
     }
     
-    private static func createGetCharacterListUseCase() -> GetEpisodeUseCaseType {
+    private static func createGetEpisodeUseCase() -> GetEpisodeUseCaseType {
         GetEpisodeUseCase(repository: createRepository())
     }
     
