@@ -13,9 +13,12 @@ struct CharacterDetailView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            characterImageSubview
-                .padding(.bottom)
-
+            CharacterImageView(
+                imageURL: character.image,
+                width: Constant.sizeImage, height: Constant.sizeImage,
+                cornerRadius: Constant.cornerRadiusImage
+            ).padding(.bottom)
+            
             VStack(alignment: .leading) {
                 VStack(alignment: .leading, spacing: .zero) {
                     Text(character.name)
@@ -30,41 +33,21 @@ struct CharacterDetailView: View {
                         Text(character.statusAndSpecieDescription)
                             .font(.body)
                     }
-                }
-                .padding(.bottom)
+                }.padding(.bottom)
                 
-                VStack(alignment: .leading, spacing: .zero) {
-                    Text("Last known location:")
-                        .font(.body)
-                        .foregroundStyle(Color.gray)
-                    Text(character.lastKnownLocation)
-                        .font(.title3)
-                }
-                .padding(.bottom)
+                CharacterSectionSubview(
+                    title: "Last known location:",
+                    subtitle: character.lastKnownLocation
+                ).padding(.bottom)
                 
-                VStack(alignment: .leading, spacing: .zero) {
-                    Text("First seen in:")
-                        .font(.body)
-                        .foregroundStyle(Color.gray)
-                    Text(character.firstSeenIn)
-                        .font(.title3)
-                }
+                CharacterSectionSubview(
+                    title: "First seen in:",
+                    subtitle: character.firstSeenIn
+                ).padding(.bottom)
             }
             
             Spacer()
         }
-    }
-    
-    private var characterImageSubview: some View {
-        AsyncImage(url: character.image) { image in
-            image
-                .resizable()
-        } placeholder: {
-            Image(systemName: Constant.placeholderImageName)
-                .resizable()
-        }
-        .frame(width: Constant.sizeImage, height: Constant.sizeImage)
-        .cornerRadius(Constant.cornerRadiusImage)
     }
 }
 

@@ -13,15 +13,11 @@ struct CharacterView: View {
     
     var body: some View {
         HStack {
-            AsyncImage(url: character.image) { image in
-                image
-                    .resizable()
-            } placeholder: {
-                Image(systemName: Constant.placeholderImageName)
-                    .resizable()
-            }
-            .frame(width: Constant.sizeImage, height: Constant.sizeImage)
-            .cornerRadius(Constant.cornerRadiusImage)
+            CharacterImageView(
+                imageURL: character.image,
+                width: Constant.sizeImage, height: Constant.sizeImage,
+                cornerRadius: Constant.cornerRadiusImage
+            )
             
             VStack(alignment: .leading) {
                 Text(character.name)
