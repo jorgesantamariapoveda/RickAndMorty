@@ -1,5 +1,9 @@
 import Foundation
 
+protocol CharacterListRepositoryType {
+    func getCharacterList() async throws -> [Character]
+}
+
 final class CharacterRepository: CharacterListRepositoryType {
     private var apiDataSource: CharacterApiDataSourceType
     private var domainMapper: CharacterDomainMapper

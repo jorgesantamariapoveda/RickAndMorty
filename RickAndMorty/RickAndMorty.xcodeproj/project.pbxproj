@@ -25,12 +25,9 @@
 		CF5BCA622B0A44E7005B2576 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA612B0A44E7005B2576 /* CharacterListView.swift */; };
 		CF5BCA652B0A4D4E005B2576 /* CharacterListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA642B0A4D4E005B2576 /* CharacterListFactory.swift */; };
 		CF82151A2BD428EE008F75A3 /* CharacterListRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8215192BD428EE008F75A3 /* CharacterListRepresentable.swift */; };
-		CFCED1F32B07DC8D00280416 /* CharacterListRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1F22B07DC8D00280416 /* CharacterListRepositoryType.swift */; };
-		CFCED1F52B07DCD000280416 /* CharacterDomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1F42B07DCD000280416 /* CharacterDomainError.swift */; };
 		CFCED1F92B07DDCB00280416 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1F82B07DDCB00280416 /* CharacterRepository.swift */; };
 		CFCED1FC2B07E57F00280416 /* CharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1FB2B07E57F00280416 /* CharacterDTO.swift */; };
 		CFCED1FF2B07E5C000280416 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1FE2B07E5C000280416 /* HTTPClientError.swift */; };
-		CFCED2012B07E5F300280416 /* CharacterApiDataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED2002B07E5F300280416 /* CharacterApiDataSourceType.swift */; };
 		CFCED2052B07EE8D00280416 /* CharacterDomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED2042B07EE8D00280416 /* CharacterDomainMapper.swift */; };
 		CFEDB0D52BD3C04100716E24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEDB0D42BD3C04100716E24 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -55,12 +52,9 @@
 		CF5BCA612B0A44E7005B2576 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 		CF5BCA642B0A4D4E005B2576 /* CharacterListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListFactory.swift; sourceTree = "<group>"; };
 		CF8215192BD428EE008F75A3 /* CharacterListRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListRepresentable.swift; sourceTree = "<group>"; };
-		CFCED1F22B07DC8D00280416 /* CharacterListRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListRepositoryType.swift; sourceTree = "<group>"; };
-		CFCED1F42B07DCD000280416 /* CharacterDomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDomainError.swift; sourceTree = "<group>"; };
 		CFCED1F82B07DDCB00280416 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
 		CFCED1FB2B07E57F00280416 /* CharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDTO.swift; sourceTree = "<group>"; };
 		CFCED1FE2B07E5C000280416 /* HTTPClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
-		CFCED2002B07E5F300280416 /* CharacterApiDataSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterApiDataSourceType.swift; sourceTree = "<group>"; };
 		CFCED2042B07EE8D00280416 /* CharacterDomainMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDomainMapper.swift; sourceTree = "<group>"; };
 		CFEDB0D42BD3C04100716E24 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,10 +96,9 @@
 				CF5BCA632B0A4D30005B2576 /* ComposicionRoot */,
 				CFCED1F62B07DD8000280416 /* Data */,
 				CF0FDEE42B07D2B000A512B1 /* Domain */,
+				CFA2D2782BD4EB8200A5FA8B /* Feature */,
 				CF5BCA552B0A366F005B2576 /* Infraestructure */,
-				CF5BCA5D2B0A4334005B2576 /* Presentation */,
 				CF0FDEDC2B07D21A00A512B1 /* Preview Content */,
-				CF5BCA602B0A44C3005B2576 /* UI */,
 			);
 			path = RickAndMorty;
 			sourceTree = "<group>";
@@ -121,9 +114,7 @@
 		CF0FDEE42B07D2B000A512B1 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				CFCED1F42B07DCD000280416 /* CharacterDomainError.swift */,
 				CF0FDEE52B07D64200A512B1 /* Entities */,
-				CFCED1F12B07DC7900280416 /* Interfaces */,
 				CF0FDEE82B07D89300A512B1 /* UseCases */,
 			);
 			path = Domain;
@@ -163,21 +154,14 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		CF5BCA5D2B0A4334005B2576 /* Presentation */ = {
+		CF5BCA5D2B0A4334005B2576 /* CharacterList */ = {
 			isa = PBXGroup;
 			children = (
 				CF8215192BD428EE008F75A3 /* CharacterListRepresentable.swift */,
+				CF5BCA612B0A44E7005B2576 /* CharacterListView.swift */,
 				CF5BCA5E2B0A4362005B2576 /* CharacterListViewModel.swift */,
 			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		CF5BCA602B0A44C3005B2576 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				CF5BCA612B0A44E7005B2576 /* CharacterListView.swift */,
-			);
-			path = UI;
+			path = CharacterList;
 			sourceTree = "<group>";
 		};
 		CF5BCA632B0A4D30005B2576 /* ComposicionRoot */ = {
@@ -188,12 +172,20 @@
 			path = ComposicionRoot;
 			sourceTree = "<group>";
 		};
-		CFCED1F12B07DC7900280416 /* Interfaces */ = {
+		CFA2D2772BD4EAE100A5FA8B /* Character */ = {
 			isa = PBXGroup;
 			children = (
-				CFCED1F22B07DC8D00280416 /* CharacterListRepositoryType.swift */,
+				CF5BCA4B2B0A2DE4005B2576 /* CharacterApiDataSource.swift */,
 			);
-			path = Interfaces;
+			path = Character;
+			sourceTree = "<group>";
+		};
+		CFA2D2782BD4EB8200A5FA8B /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				CF5BCA5D2B0A4334005B2576 /* CharacterList */,
+			);
+			path = Feature;
 			sourceTree = "<group>";
 		};
 		CFCED1F62B07DD8000280416 /* Data */ = {
@@ -227,12 +219,11 @@
 		CFCED1FD2B07E59700280416 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				CF5BCA4B2B0A2DE4005B2576 /* CharacterApiDataSource.swift */,
-				CFCED2002B07E5F300280416 /* CharacterApiDataSourceType.swift */,
 				CF5BCA4F2B0A35EF005B2576 /* Endpoint.swift */,
 				CFCED1FE2B07E5C000280416 /* HTTPClientError.swift */,
 				CF5BCA532B0A3654005B2576 /* HTTPClientType.swift */,
 				CF5BCA512B0A360B005B2576 /* HTTPMethod.swift */,
+				CFA2D2772BD4EAE100A5FA8B /* Character */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -313,19 +304,16 @@
 				CFCED1FF2B07E5C000280416 /* HTTPClientError.swift in Sources */,
 				CF5BCA652B0A4D4E005B2576 /* CharacterListFactory.swift in Sources */,
 				CF0FDEE72B07D6AB00A512B1 /* Character.swift in Sources */,
-				CFCED2012B07E5F300280416 /* CharacterApiDataSourceType.swift in Sources */,
 				CFCED1FC2B07E57F00280416 /* CharacterDTO.swift in Sources */,
 				CF5BCA502B0A35EF005B2576 /* Endpoint.swift in Sources */,
 				CFCED2052B07EE8D00280416 /* CharacterDomainMapper.swift in Sources */,
 				CF5BCA582B0A36C1005B2576 /* URLSessionHTTPClient.swift in Sources */,
 				CF0FDED92B07D21900A512B1 /* ContentView.swift in Sources */,
-				CFCED1F52B07DCD000280416 /* CharacterDomainError.swift in Sources */,
 				CF5BCA5F2B0A4362005B2576 /* CharacterListViewModel.swift in Sources */,
 				CF0FDEEA2B07D8CA00A512B1 /* GetCharacterListUseCase.swift in Sources */,
 				CFCED1F92B07DDCB00280416 /* CharacterRepository.swift in Sources */,
 				CF5BCA4E2B0A31A8005B2576 /* CharacterListDTO.swift in Sources */,
 				CF82151A2BD428EE008F75A3 /* CharacterListRepresentable.swift in Sources */,
-				CFCED1F32B07DC8D00280416 /* CharacterListRepositoryType.swift in Sources */,
 				CF5BCA522B0A360B005B2576 /* HTTPMethod.swift in Sources */,
 				CF0FDED72B07D21900A512B1 /* RickAndMortyApp.swift in Sources */,
 				CF5BCA4C2B0A2DE4005B2576 /* CharacterApiDataSource.swift in Sources */,

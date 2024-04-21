@@ -1,5 +1,9 @@
 import Foundation
 
+protocol CharacterApiDataSourceType {
+    func getCharacterList() async throws -> [CharacterDTO]
+}
+
 final class CharacterApiDataSource: CharacterApiDataSourceType {
     private let httpClient: HTTPClientType
     
@@ -18,7 +22,9 @@ final class CharacterApiDataSource: CharacterApiDataSourceType {
             baseUrl: "https://rickandmortyapi.com/api/"
         )
         
-        let result = try JSONDecoder().decode(CharacterListDTO.self, from: data)
+        guard let result = try? JSONDecoder().decode(CharacterListDTO.self, from: data) else {
+            throw HTTPClientError.parsingError
+        }
         
         return result.results
     }
