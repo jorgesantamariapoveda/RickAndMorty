@@ -121,7 +121,7 @@
 				CFEDB0D42BD3C04100716E24 /* LaunchScreen.storyboard */,
 				CF0FDED62B07D21900A512B1 /* RickAndMortyApp.swift */,
 				CF0FDEDA2B07D21A00A512B1 /* Assets.xcassets */,
-				CF5BCA632B0A4D30005B2576 /* ComposicionRoot */,
+				CF5BCA632B0A4D30005B2576 /* CompositionRoot */,
 				CFCED1F62B07DD8000280416 /* Data */,
 				CF0FDEE42B07D2B000A512B1 /* Domain */,
 				CFA2D2792BD4ECB600A5FA8B /* Extension */,
@@ -199,13 +199,13 @@
 			path = CharacterList;
 			sourceTree = "<group>";
 		};
-		CF5BCA632B0A4D30005B2576 /* ComposicionRoot */ = {
+		CF5BCA632B0A4D30005B2576 /* CompositionRoot */ = {
 			isa = PBXGroup;
 			children = (
 				CF67C1D72BD56F0600E5BBD9 /* CharacterDetailFactory.swift */,
 				CF5BCA642B0A4D4E005B2576 /* CharacterListFactory.swift */,
 			);
-			path = ComposicionRoot;
+			path = CompositionRoot;
 			sourceTree = "<group>";
 		};
 		CF67C1C22BD55EF100E5BBD9 /* UI */ = {
