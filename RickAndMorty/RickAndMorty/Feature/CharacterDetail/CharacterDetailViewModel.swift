@@ -12,7 +12,7 @@ final class CharacterDetailViewModel: ObservableObject {
         self.getEpisodeUseCase = getEpisodeUseCase
     }
     
-    @Published var firstSeenIn: String = "⚡️ Implement"
+    @Published var firstSeenIn: String = ""
     
     @MainActor
     func getEpisode() {

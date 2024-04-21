@@ -44,10 +44,12 @@ struct CharacterDetailView: View {
                     subtitle: viewModel.character.lastKnownLocation
                 ).padding(.bottom)
                 
-                CharacterSectionSubview(
-                    title: "First seen in:",
-                    subtitle: viewModel.firstSeenIn
-                ).padding(.bottom)
+                if !viewModel.firstSeenIn.isEmpty {
+                    CharacterSectionSubview(
+                        title: "First seen in:",
+                        subtitle: viewModel.firstSeenIn
+                    ).padding(.bottom)
+                }
             }
             
             Spacer()
