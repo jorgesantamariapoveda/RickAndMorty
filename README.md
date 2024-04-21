@@ -15,3 +15,10 @@
 - Principios SOLID + clean code.
 - Arquitectura MVVM + clean arquitecture.
 - No usar librería de terceros.
+
+### Cosas pendientes para hacer
+- Localizations
+- Cache
+- Persistence
+- Animation
+- Test
