@@ -22,7 +22,9 @@ final class URLSessionHTTPClient: HTTPClientType {
             throw HTTPClientError.badURL
         }
         
-        guard let (data, response) = try? await session.data(from: url) else {
+        let request = URLRequest(url: url)
+        
+        guard let (data, response) = try? await session.data(for: request) else {
             throw HTTPClientError.genericError
         }
         
