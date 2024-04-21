@@ -1,41 +1,6 @@
 import SwiftUI
 
-extension CGFloat {
-    /// 4
-    static let spacingXS: CGFloat = 4
-    /// 8
-    static let spacingS: CGFloat = 8
-    /// 12
-    static let spacingM: CGFloat = 12
-    /// 16
-    static let spacingL: CGFloat = 16
-    /// 24
-    static let spacingXL: CGFloat = 24
-    /// 32
-    static let spacingXXL: CGFloat = 32
-}
-
-struct ContentView: View {
-    var body: some View {
-        Text("pruebas")
-//        NavigationStack {
-//            ScrollView {
-//                VStack {
-//                    CardCharacter()
-//                    CardCharacter()
-//                    CardCharacter()
-//                    CardCharacter()
-//                    CardCharacter()
-//                    CardCharacter()
-//                }
-//                .padding()
-//            }
-//            .navigationTitle("The Rick and Morty")
-//        }
-    }
-}
-
-struct CardCharacter: View {
+struct CharacterView: View {
     let character: CharacterListRepresentable
     
     var body: some View {
@@ -43,8 +8,6 @@ struct CardCharacter: View {
             Image(systemName: "person.crop.circle")
                 .resizable()
                 .frame(width: 80, height: 80)
-//                .frame(maxWidth: .infinity, maxHeight: .infinity)
-//                .background(.red)
             VStack(alignment: .leading, spacing: .spacingL) {
                 HeaderCardCharacter(title: character.name, subtitle: character.statusAndSpecie)
                 BodyCardCharacter(title: "Last known location:", subtitle: character.lastKnownLocation)
@@ -87,8 +50,8 @@ struct BodyCardCharacter: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct CharacterView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CharacterView()
+//    }
+//}

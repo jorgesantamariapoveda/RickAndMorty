@@ -8,7 +8,7 @@ struct CharacterListView: View {
     }
     
     var body: some View {
-        VStack {
+        Group {
             switch viewModel.state {
             case .idle:
                 EmptyView()
@@ -17,11 +17,11 @@ struct CharacterListView: View {
             case .loaded:
                 List {
                     ForEach(viewModel.characters) { character in
-                        CardCharacter(character: character)
+                        CharacterView(character: character)
                     }
                 }
             case .error:
-                Text("Error")
+                Text("Error") //!! Review 🔴 Improve
             }
         }
         .onAppear {
