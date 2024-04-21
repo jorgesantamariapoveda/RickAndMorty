@@ -1,7 +1,6 @@
 # The Rick and Morty API
 
 ### Recursos
-- [Enunciado](./Enunciado/Enunciado.pdf)
 - [Documentación API](https://rickandmortyapi.com/documentation)
 
 ### Entorno
@@ -16,10 +15,3 @@
 - Principios SOLID + clean code.
 - Arquitectura MVVM + clean arquitecture.
 - No usar librería de terceros.
-
-### Capturas de pantallas
-
-![LaunchScreen](./screenshots/launchscreen.png "LaunchScreen")
-![Home](./screenshots/home.png "Home")
-![Info](./screenshots/detailMedium.png "Info Medium")
-![Info](./screenshots/detailLarge.png "Info Large")
