@@ -15,7 +15,6 @@
 		CF0FDEEA2B07D8CA00A512B1 /* GetCharacterListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0FDEE92B07D8CA00A512B1 /* GetCharacterListUseCase.swift */; };
 		CF5BCA4C2B0A2DE4005B2576 /* CharacterApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA4B2B0A2DE4005B2576 /* CharacterApiDataSource.swift */; };
 		CF5BCA4E2B0A31A8005B2576 /* CharacterListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA4D2B0A31A8005B2576 /* CharacterListDTO.swift */; };
-		CF5BCA502B0A35EF005B2576 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA4F2B0A35EF005B2576 /* Endpoint.swift */; };
 		CF5BCA522B0A360B005B2576 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA512B0A360B005B2576 /* HTTPMethod.swift */; };
 		CF5BCA542B0A3654005B2576 /* HTTPClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA532B0A3654005B2576 /* HTTPClientType.swift */; };
 		CF5BCA582B0A36C1005B2576 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BCA572B0A36C1005B2576 /* URLSessionHTTPClient.swift */; };
@@ -57,7 +56,6 @@
 		CF0FDEE92B07D8CA00A512B1 /* GetCharacterListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharacterListUseCase.swift; sourceTree = "<group>"; };
 		CF5BCA4B2B0A2DE4005B2576 /* CharacterApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterApiDataSource.swift; sourceTree = "<group>"; };
 		CF5BCA4D2B0A31A8005B2576 /* CharacterListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListDTO.swift; sourceTree = "<group>"; };
-		CF5BCA4F2B0A35EF005B2576 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		CF5BCA512B0A360B005B2576 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		CF5BCA532B0A3654005B2576 /* HTTPClientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientType.swift; sourceTree = "<group>"; };
 		CF5BCA572B0A36C1005B2576 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
@@ -322,7 +320,6 @@
 			isa = PBXGroup;
 			children = (
 				CFA2D2772BD4EAE100A5FA8B /* Character */,
-				CF5BCA4F2B0A35EF005B2576 /* Endpoint.swift */,
 				CF67C1CC2BD56AC800E5BBD9 /* Episode */,
 				CFCED1FE2B07E5C000280416 /* HTTPClientError.swift */,
 				CF5BCA532B0A3654005B2576 /* HTTPClientType.swift */,
@@ -412,7 +409,6 @@
 				CFCED1FC2B07E57F00280416 /* CharacterDTO.swift in Sources */,
 				CF67C1D22BD56B7000E5BBD9 /* GetEpisodeUseCase.swift in Sources */,
 				CF67C1C42BD55EFF00E5BBD9 /* CharacterImageView.swift in Sources */,
-				CF5BCA502B0A35EF005B2576 /* Endpoint.swift in Sources */,
 				CFCED2052B07EE8D00280416 /* CharacterDomainMapper.swift in Sources */,
 				CF5BCA582B0A36C1005B2576 /* URLSessionHTTPClient.swift in Sources */,
 				CF0FDED92B07D21900A512B1 /* CharacterView.swift in Sources */,

@@ -1,8 +1,8 @@
 import Foundation
 
 final class URLSessionRequestMaker {
-    func url(endpoint: Endpoint, baseUrl: String) -> URL? {
-        let urlComponents = URLComponents(string: baseUrl + endpoint.path)
+    func url(baseUrl: String, path: String) -> URL? {
+        let urlComponents = URLComponents(string: baseUrl + path)
         return urlComponents?.url
     }
 }

@@ -16,24 +16,24 @@ final class URLSessionHTTPClient: HTTPClientType {
     }
     
     func makeRequest(baseUrl: String, path: String, method: HTTPMethod) async throws -> Data {
-        let endpoint = Endpoint(path: path, method: method)
-        let url = requestMaquer.url(endpoint: endpoint, baseUrl: baseUrl)
+        let url = requestMaquer.url(baseUrl: baseUrl, path: path)
         
-        return try await execute(url: url)
+        return try await execute(url: url, method: method)
     }
     
     func makeRequest(url: String, method: HTTPMethod) async throws -> Data {
         let url = URL(string: url)
         
-        return try await execute(url: url)
+        return try await execute(url: url, method: method)
     }
     
-    private func execute(url: URL?) async throws -> Data {
+    private func execute(url: URL?, method: HTTPMethod) async throws -> Data {
         guard let url = url else {
             throw HTTPClientError.badURL
         }
 
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: url)
+        request.httpMethod = method.rawValue
         
         guard let (data, response) = try? await session.data(for: request) else {
             throw HTTPClientError.genericError

@@ -1,5 +1,5 @@
 import Foundation
 
-enum HTTPMethod {
-    case get
+enum HTTPMethod: String {
+    case get = "GET"
 }
