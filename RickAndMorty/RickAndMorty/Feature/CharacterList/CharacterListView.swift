@@ -19,6 +19,7 @@ struct CharacterListView: View {
                     ForEach(viewModel.characters) { character in
                         CharacterView(character: character)
                     }
+                    .listRowSeparator(.hidden)
                 }
             case .error:
                 Text("Error") //!! Review 🔴 Improve
@@ -29,9 +30,3 @@ struct CharacterListView: View {
         }
     }
 }
-//
-//struct CharacterListView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CharacterListView()
-//    }
-//}
