@@ -1,11 +1,11 @@
 import SwiftUI
 
 struct CharacterView: View {
-    let character: CharacterListRepresentable
+    let character: Character
     
     enum Constant {
         static let sizeImage: CGFloat = 100
-        static let cornerRadiusBackground: CGFloat = 16
+        static let cornerRadiusImage: CGFloat = 16
         static let opacityBackground: CGFloat = 0.75
         static let radioStatusColor: CGFloat = 8
         static let placeholderImageName = "person.crop.circle"
@@ -21,6 +21,7 @@ struct CharacterView: View {
                     .resizable()
             }
             .frame(width: Constant.sizeImage, height: Constant.sizeImage)
+            .cornerRadius(Constant.cornerRadiusImage)
             
             VStack(alignment: .leading) {
                 Text(character.name)
@@ -32,7 +33,7 @@ struct CharacterView: View {
                         .frame(width: Constant.radioStatusColor, height: Constant.radioStatusColor)
                         .foregroundStyle(character.statusColor)
                     
-                    Text(character.statusAndSpecie)
+                    Text(character.statusAndSpecieDescription)
                         .font(.caption)
                     
                     Spacer()
@@ -46,7 +47,7 @@ struct CharacterView: View {
 
 struct CharacterView_Previews: PreviewProvider {
     static var previews: some View {
-        let model = Character(
+        let character = Character(
             id: 1,
             name: "Spiderweb teddy bear",
             status: .alive,
@@ -55,9 +56,8 @@ struct CharacterView_Previews: PreviewProvider {
             firstSeenIn: "firstSeenIn",
             image: URL(string: "https://rickandmortyapi.com/api/character/avatar/406.jpeg")
         )
-        let representable = CharacterListRepresentable(domainModel: model)
         
-        CharacterView(character: representable)
+        CharacterView(character: character)
             .previewLayout(.sizeThatFits)
     }
 }

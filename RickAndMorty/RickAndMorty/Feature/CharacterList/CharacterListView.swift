@@ -19,7 +19,7 @@ struct CharacterListView: View {
                     List {
                         ForEach(viewModel.characters) { character in
                             NavigationLink {
-                                Text(character.name)
+                                CharacterDetailView(character: character)
                             } label: {
                                 CharacterView(character: character)
                             }

@@ -9,7 +9,7 @@ final class CharacterDomainMapper {
                 status: character.characterStatus,
                 species: character.species,
                 lastKnownLocation: character.location.name,
-                firstSeenIn: "", //!! Review 🔴
+                firstSeenIn: "⚡️Implement!",
                 image: URL(string: character.image)
             )
         }

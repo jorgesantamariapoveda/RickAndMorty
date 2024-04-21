@@ -11,7 +11,7 @@ final class CharacterListViewModel: ObservableObject {
     }
     
     @Published var state: State = .idle
-    @Published var characters = [CharacterListRepresentable]()
+    @Published var characters = [Character]()
     @Published var errors = "" {
         didSet {
             showErrors = !errors.isEmpty
@@ -29,9 +29,8 @@ final class CharacterListViewModel: ObservableObject {
         
         Task {
             do {
-                let result = try await getCharacterListUseCase.execute()
+                characters = try await getCharacterListUseCase.execute()
                 state = .loaded
-                characters = result.map { CharacterListRepresentable(domainModel: $0) }
             } catch {
                 state = .error
                 errors = error.localizedDescription
@@ -46,13 +45,11 @@ final class CharacterListViewModel: ObservableObject {
         Task {
             do {
                 let datasource = CharacterApiDataSourceMock()
-                let characterList = try await datasource.getCharacterList()
-                
                 let mapper = CharacterDomainMapper()
-                let result = mapper.map(characterList: characterList)
                 
+                let characterList = try await datasource.getCharacterList()
+                characters = mapper.map(characterList: characterList)
                 state = .loaded
-                characters = result.map { CharacterListRepresentable(domainModel: $0) }
             } catch {
                 state = .error
                 errors = error.localizedDescription
