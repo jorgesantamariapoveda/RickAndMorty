@@ -6,6 +6,7 @@ struct CharacterDTO: Decodable {
     let status: Status
     let species: String
     let location: Location
+    let image: String
     
     enum Status: String, Decodable {
         case alive = "Alive"
@@ -15,5 +16,18 @@ struct CharacterDTO: Decodable {
     
     struct Location: Decodable {
         let name: String
+    }
+}
+
+extension CharacterDTO {
+    var characterStatus: CharacterStatus {
+        switch self.status {
+        case .alive:
+            return .alive
+        case .dead:
+            return .dead
+        case .unknown:
+            return .unknown
+        }
     }
 }

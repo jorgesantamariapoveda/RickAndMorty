@@ -6,10 +6,11 @@ final class CharacterDomainMapper {
             Character(
                 id: character.id,
                 name: character.name,
-                status: character.status.rawValue,
+                status: character.characterStatus,
                 species: character.species,
                 lastKnownLocation: character.location.name,
-                firstSeenIn: "" //!! Review 🔴
+                firstSeenIn: "", //!! Review 🔴
+                image: URL(string: character.image)
             )
         }
     }
