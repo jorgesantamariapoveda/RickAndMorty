@@ -8,6 +8,7 @@ struct CharacterView: View {
         static let cornerRadiusBackground: CGFloat = 16
         static let opacityBackground: CGFloat = 0.75
         static let radioStatusColor: CGFloat = 8
+        static let placeholderImageName = "person.crop.circle"
     }
     
     var body: some View {
@@ -15,12 +16,11 @@ struct CharacterView: View {
             AsyncImage(url: character.image) { image in
                 image
                     .resizable()
-                    .frame(width: Constant.sizeImage, height: Constant.sizeImage)
             } placeholder: {
-                Image(systemName: "person.crop.circle")
+                Image(systemName: Constant.placeholderImageName)
                     .resizable()
-                    .frame(width: Constant.sizeImage, height: Constant.sizeImage)
             }
+            .frame(width: Constant.sizeImage, height: Constant.sizeImage)
             
             VStack(alignment: .leading) {
                 Text(character.name)
@@ -44,83 +44,6 @@ struct CharacterView: View {
     }
 }
 
-
-struct CharacterView2: View {
-    let character: CharacterListRepresentable
-    
-    enum Constant {
-        static let sizeImage: CGFloat = 150
-        static let cornerRadiusBackground: CGFloat = 12
-        static let opacityBackground: CGFloat = 0.35
-    }
-    
-    var body: some View {
-        HStack(spacing: .spacingM) {
-            AsyncImage(url: character.image) { image in
-                image
-                    .resizable()
-                    .frame(width: Constant.sizeImage, height: Constant.sizeImage)
-            } placeholder: {
-                Image(systemName: "person.crop.circle")
-                    .resizable()
-                    .frame(width: Constant.sizeImage, height: Constant.sizeImage)
-            }
-
-            VStack(alignment: .leading, spacing: .spacingL) {
-                HeaderCardCharacter(title: character.name, statusColor: character.statusColor, subtitle: character.statusAndSpecie)
-                BodyCardCharacter(title: "Last known location:", subtitle: character.lastKnownLocation)
-                BodyCardCharacter(title: "First seen in:", subtitle: "Rick Potion #9")
-            }
-            .frame(maxWidth: .infinity)
-        }
-        .padding()
-        .background(
-            RoundedRectangle(cornerRadius: Constant.cornerRadiusBackground)
-                .fill(.gray.opacity(Constant.opacityBackground))
-        )
-    }
-}
-
-struct HeaderCardCharacter: View {
-    let title: String
-    let statusColor: Color
-    let subtitle: String
-    
-    enum Constant {
-        static let radioStatusColor: CGFloat = 8
-    }
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: .spacingS) {
-            Text(title)
-                .font(.body)
-                .bold()
-            HStack {
-                Circle()
-                    .frame(width: Constant.radioStatusColor, height: Constant.radioStatusColor)
-                    .foregroundStyle(statusColor)
-                Text(subtitle)
-                    .font(.caption)
-            }
-        }
-    }
-}
-
-struct BodyCardCharacter: View {
-    let title: String
-    let subtitle: String
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: .spacingS) {
-            Text(title)
-                .font(.caption)
-                .foregroundColor(.gray)
-            Text(subtitle)
-                .font(.subheadline)
-        }
-    }
-}
-
 struct CharacterView_Previews: PreviewProvider {
     static var previews: some View {
         let model = Character(
@@ -133,6 +56,7 @@ struct CharacterView_Previews: PreviewProvider {
             image: URL(string: "https://rickandmortyapi.com/api/character/avatar/406.jpeg")
         )
         let representable = CharacterListRepresentable(domainModel: model)
+        
         CharacterView(character: representable)
             .previewLayout(.sizeThatFits)
     }
