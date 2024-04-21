@@ -43,15 +43,16 @@ final class CharacterListViewModel: ObservableObject {
     func getCharacterListMock() {
         state = .loading
         
-        let datasource = CharacterApiDataSourceMock()
-        let mapper = CharacterDomainMapper()
-        
         Task {
             do {
-                let result = try await datasource.getCharacterList()
-                let result2 = mapper.map(characterList: result)
+                let datasource = CharacterApiDataSourceMock()
+                let characterList = try await datasource.getCharacterList()
+                
+                let mapper = CharacterDomainMapper()
+                let result = mapper.map(characterList: characterList)
+                
                 state = .loaded
-                characters = result2.map { CharacterListRepresentable(domainModel: $0) }
+                characters = result.map { CharacterListRepresentable(domainModel: $0) }
             } catch {
                 state = .error
                 errors = error.localizedDescription
