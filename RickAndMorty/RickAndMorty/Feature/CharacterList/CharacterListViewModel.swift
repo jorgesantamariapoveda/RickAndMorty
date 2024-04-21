@@ -12,7 +12,12 @@ final class CharacterListViewModel: ObservableObject {
     
     @Published var state: State = .idle
     @Published var characters = [CharacterListRepresentable]()
-    @Published var errors = ""
+    @Published var errors = "" {
+        didSet {
+            showErrors = !errors.isEmpty
+        }
+    }
+    @Published var showErrors = false
     
     init(getCharacterListUseCase: GetCharacterListUseCaseType) {
         self.getCharacterListUseCase = getCharacterListUseCase
@@ -21,11 +26,32 @@ final class CharacterListViewModel: ObservableObject {
     @MainActor
     func getCharacterList() {
         state = .loading
+        
         Task {
             do {
                 let result = try await getCharacterListUseCase.execute()
                 state = .loaded
                 characters = result.map { CharacterListRepresentable(domainModel: $0) }
+            } catch {
+                state = .error
+                errors = error.localizedDescription
+            }
+        }
+    }
+    
+    @MainActor
+    func getCharacterListMock() {
+        state = .loading
+        
+        let datasource = CharacterApiDataSourceMock()
+        let mapper = CharacterDomainMapper()
+        
+        Task {
+            do {
+                let result = try await datasource.getCharacterList()
+                let result2 = mapper.map(characterList: result)
+                state = .loaded
+                characters = result2.map { CharacterListRepresentable(domainModel: $0) }
             } catch {
                 state = .error
                 errors = error.localizedDescription

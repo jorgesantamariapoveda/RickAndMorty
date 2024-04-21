@@ -28,6 +28,7 @@
 		CFA2D27B2BD4ECCB00A5FA8B /* CGFloat+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2D27A2BD4ECCB00A5FA8B /* CGFloat+.swift */; };
 		CFA2D27D2BD4F3D600A5FA8B /* characterListJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA2D27C2BD4F3D600A5FA8B /* characterListJSON.swift */; };
 		CFB782A02BD524B800B2E515 /* characterJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB7829F2BD524B800B2E515 /* characterJSON.swift */; };
+		CFB782A22BD52A5A00B2E515 /* CharacterApiDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB782A12BD52A5A00B2E515 /* CharacterApiDataSourceMock.swift */; };
 		CFCED1F92B07DDCB00280416 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1F82B07DDCB00280416 /* CharacterRepository.swift */; };
 		CFCED1FC2B07E57F00280416 /* CharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1FB2B07E57F00280416 /* CharacterDTO.swift */; };
 		CFCED1FF2B07E5C000280416 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCED1FE2B07E5C000280416 /* HTTPClientError.swift */; };
@@ -58,6 +59,8 @@
 		CFA2D27A2BD4ECCB00A5FA8B /* CGFloat+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+.swift"; sourceTree = "<group>"; };
 		CFA2D27C2BD4F3D600A5FA8B /* characterListJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = characterListJSON.swift; sourceTree = "<group>"; };
 		CFB7829F2BD524B800B2E515 /* characterJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = characterJSON.swift; sourceTree = "<group>"; };
+		CFB782A12BD52A5A00B2E515 /* CharacterApiDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterApiDataSourceMock.swift; sourceTree = "<group>"; };
+		CFB782A32BD52B4100B2E515 /* Roadmap.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Roadmap.md; sourceTree = "<group>"; };
 		CFCED1F82B07DDCB00280416 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
 		CFCED1FB2B07E57F00280416 /* CharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDTO.swift; sourceTree = "<group>"; };
 		CFCED1FE2B07E5C000280416 /* HTTPClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 				CFB7829F2BD524B800B2E515 /* characterJSON.swift */,
 				CFA2D27C2BD4F3D600A5FA8B /* characterListJSON.swift */,
 				CF0FDEDD2B07D21A00A512B1 /* Preview Assets.xcassets */,
+				CFB782A32BD52B4100B2E515 /* Roadmap.md */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -185,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				CF5BCA4B2B0A2DE4005B2576 /* CharacterApiDataSource.swift */,
+				CFB782A12BD52A5A00B2E515 /* CharacterApiDataSourceMock.swift */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 				CF5BCA4C2B0A2DE4005B2576 /* CharacterApiDataSource.swift in Sources */,
 				CF5BCA542B0A3654005B2576 /* HTTPClientType.swift in Sources */,
 				CFA2D27B2BD4ECCB00A5FA8B /* CGFloat+.swift in Sources */,
+				CFB782A22BD52A5A00B2E515 /* CharacterApiDataSourceMock.swift in Sources */,
 				CF5BCA5C2B0A4074005B2576 /* URLSessionErrorResolver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

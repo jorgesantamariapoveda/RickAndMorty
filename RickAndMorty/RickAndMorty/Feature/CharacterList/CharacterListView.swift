@@ -28,5 +28,12 @@ struct CharacterListView: View {
         .onAppear {
             viewModel.getCharacterList()
         }
+        .alert("Error", isPresented: $viewModel.showErrors) {
+            Button("Try with Mock") {
+                viewModel.getCharacterListMock()
+            }
+        } message: {
+            Text(viewModel.errors)
+        }
     }
 }
