@@ -20,8 +20,6 @@ struct CharacterListView: View {
                         ForEach(viewModel.characters) { character in
                             NavigationLink {
                                 CharacterDetailFactory.create(character: character)
-//                                Text("Implementar \(character.episodeList.count)")
-//                                CharacterDetailView(character: character)
                             } label: {
                                 CharacterView(character: character)
                             }
