@@ -25,5 +25,5 @@
 
 ### Capturas de pantallas
 
-![Characters](characters.png "Characters")
-![Character](character.png "Character")
+![Characters](/characters.png "Characters")
+![Character](/character.png "Character")
