@@ -22,3 +22,8 @@
 - Persistence
 - Animation
 - Test
+
+### Capturas de pantallas
+
+![Characters](characters.png "Characters")
+![Character](character.png "Character")
